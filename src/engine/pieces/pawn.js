@@ -1,6 +1,6 @@
 import Piece from './piece';
-import Player from '../../../src/engine/player';
-import Square from '../../../src/engine/square';
+import Player from "../player";
+import Square from "../square";
 
 export default class Pawn extends Piece {
 
