@@ -10,20 +10,31 @@ export default class Pawn extends Piece {
 
     getAvailableMoves(board) {
         const pawnPlace = board.findPiece(this);
+        let pawnRow = pawnPlace.row;
+        let pawnCol = pawnPlace.col;
         const outputArray = [];
-        if (pawnPlace.row < 7 && this.player === Player.WHITE) {
-            outputArray.push(new Square(pawnPlace.row+1, pawnPlace.col));
+        if (pawnRow < 7 && this.player === Player.WHITE) {
+            if (board.isSquareFree(new Square(pawnRow+1, pawnCol))) {
+                outputArray.push(new Square(pawnRow+1, pawnCol));
+            }
         }
-        if (pawnPlace.row > 0 && this.player === Player.BLACK) {
-            outputArray.push(new Square(pawnPlace.row-1, pawnPlace.col));
+        if (pawnRow > 0 && this.player === Player.BLACK) {
+            if (board.isSquareFree(new Square(pawnRow-1, pawnCol))) {
+                outputArray.push(new Square(pawnRow - 1, pawnCol));
+            }
         }
         // if on specific row means it is the first move
-        if (pawnPlace.row === 1 && this.player === Player.WHITE) {
-            outputArray.push(new Square(pawnPlace.row+2, pawnPlace.col));
+        if (pawnRow === 1 && this.player === Player.WHITE) {
+            if (board.isSquareFree(new Square(pawnRow+2, pawnCol)) && board.isSquareFree(new Square(pawnRow+1, pawnCol))) {
+                outputArray.push(new Square(pawnRow + 2, pawnCol));
+            }
         }
-        if (pawnPlace.row === 6 && this.player === Player.BLACK) {
-            outputArray.push(new Square(pawnPlace.row-2, pawnPlace.col));
+        if (pawnRow === 6 && this.player === Player.BLACK) {
+            if (board.isSquareFree(new Square(pawnRow-2, pawnCol)) && board.isSquareFree(new Square(pawnRow-1, pawnCol))) {
+                outputArray.push(new Square(pawnRow - 2, pawnCol));
+            }
         }
+        console.log(outputArray);
         return outputArray;
     }
 }

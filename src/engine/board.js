@@ -24,6 +24,10 @@ export default class Board {
         return this.board[square.row][square.col];
     }
 
+    isSquareFree(square) {
+        return this.board[square.row][square.col] === undefined;
+    }
+
     findPiece(pieceToFind) {
         for (let row = 0; row < this.board.length; row++) {
             for (let col = 0; col < this.board[row].length; col++) {
