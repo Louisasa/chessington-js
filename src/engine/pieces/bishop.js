@@ -12,7 +12,7 @@ export default class Bishop extends Piece {
         let bishopCol = bishopPlace.col;
         const outputArray = [];
         // need to check there isn't a piece in the way
-        while(bishopRow+1 <= 7 && bishopCol+1 <= 7) {
+        while(bishopRow+1 <= 7 && bishopCol+1 <= 7 && board.isSquareFree(new Square(bishopRow+1, bishopCol+1))) {
             // check piece isn't there
             outputArray.push(new Square(bishopRow+1, bishopCol+1));
             bishopRow++;
@@ -20,21 +20,21 @@ export default class Bishop extends Piece {
         }
         bishopRow = bishopPlace.row;
         bishopCol = bishopPlace.col;
-        while (bishopRow+1 <= 7 && bishopCol-1 >= 0) {
+        while (bishopRow+1 <= 7 && bishopCol-1 >= 0 && board.isSquareFree(new Square(bishopRow+1, bishopCol-1))) {
             outputArray.push(new Square(bishopRow+1, bishopCol-1));
             bishopRow++;
             bishopCol--;
         }
         bishopRow = bishopPlace.row;
         bishopCol = bishopPlace.col;
-        while(bishopRow-1 >= 0 && bishopCol+1 <= 7) {
+        while(bishopRow-1 >= 0 && bishopCol+1 <= 7 && board.isSquareFree(new Square(bishopRow-1, bishopCol+1))) {
             outputArray.push(new Square(bishopRow-1, bishopCol+1));
             bishopRow--;
             bishopCol++;
         }
         bishopRow = bishopPlace.row;
         bishopCol = bishopPlace.col;
-        while (bishopRow-1 >= 0 && bishopCol-1 >= 0) {
+        while (bishopRow-1 >= 0 && bishopCol-1 >= 0 && board.isSquareFree(new Square(bishopRow-1, bishopCol-1))) {
             outputArray.push(new Square(bishopRow-1, bishopCol-1));
             bishopRow--;
             bishopCol--;
