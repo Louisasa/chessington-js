@@ -12,29 +12,54 @@ export default class Queen extends Piece {
         let queenCol = queenPlace.col;
         const outputArray = [];
         // need to check there isn't a piece in the way
-        for (let index = 1; queenCol+index <= 7; index++) {
-            outputArray.push(new Square(queenRow, queenCol+index));
-            if (queenRow+index <= 7) {
-                outputArray.push(new Square(queenRow+index, queenCol+index));
-            }
-            if (queenRow-index >= 0) {
-                outputArray.push(new Square(queenRow-index, queenCol+index));
-            }
+        while(queenRow+1 <= 7 && queenCol+1 <= 7 && board.isSquareFree(new Square(queenRow+1, queenCol+1))) {
+            // check piece isn't there
+            outputArray.push(new Square(queenRow+1, queenCol+1));
+            queenRow++;
+            queenCol++;
         }
-        for (let index = 1; queenCol-index >= 0; index++) {
-            outputArray.push(new Square(queenRow, queenCol-index));
-            if (queenRow+index <= 7) {
-                outputArray.push(new Square(queenRow+index, queenCol-index));
-            }
-            if (queenRow-index >= 0) {
-                outputArray.push(new Square(queenRow-index, queenCol-index));
-            }
+        queenRow = queenPlace.row;
+        queenCol = queenPlace.col;
+        while (queenRow+1 <= 7 && queenCol-1 >= 0 && board.isSquareFree(new Square(queenRow+1, queenCol-1))) {
+            outputArray.push(new Square(queenRow+1, queenCol-1));
+            queenRow++;
+            queenCol--;
         }
-        for (let index = 1; queenRow+index <= 7; index++) {
-            outputArray.push(new Square(queenRow+index, queenCol));
+        queenRow = queenPlace.row;
+        queenCol = queenPlace.col;
+        while(queenRow-1 >= 0 && queenCol+1 <= 7 && board.isSquareFree(new Square(queenRow-1, queenCol+1))) {
+            outputArray.push(new Square(queenRow-1, queenCol+1));
+            queenRow--;
+            queenCol++;
         }
-        for (let index = 1; queenRow-index >= 0; index++) {
-            outputArray.push(new Square(queenRow-index, queenCol));
+        queenRow = queenPlace.row;
+        queenCol = queenPlace.col;
+        while (queenRow-1 >= 0 && queenCol-1 >= 0 && board.isSquareFree(new Square(queenRow-1, queenCol-1))) {
+            outputArray.push(new Square(queenRow-1, queenCol-1));
+            queenRow--;
+            queenCol--;
+        }
+        queenRow = queenPlace.row;
+        queenCol = queenPlace.col;
+        while(queenRow+1 <= 7 && board.isSquareFree(new Square(queenRow+1, queenCol))) {
+            // check piece isn't there
+            outputArray.push(new Square(queenRow+1, queenCol));
+            queenRow++;
+        }
+        queenRow = queenPlace.row;
+        while (queenCol+1 <= 7 && board.isSquareFree(new Square(queenRow, queenCol+1))) {
+            outputArray.push(new Square(queenRow, queenCol+1));
+            queenCol++;
+        }
+        queenCol = queenPlace.col;
+        while(queenRow-1 >= 0 && board.isSquareFree(new Square(queenRow-1, queenCol))) {
+            outputArray.push(new Square(queenRow-1, queenCol));
+            queenRow--;
+        }
+        queenRow = queenPlace.row;
+        while (queenCol-1 >= 0 && board.isSquareFree(new Square(queenRow, queenCol-1))) {
+            outputArray.push(new Square(queenRow, queenCol-1));
+            queenCol--;
         }
         return outputArray;
     }

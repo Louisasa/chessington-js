@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbd37c6c-0f78-4a39-b3c8-8cdc0dbe44bd" name="Default Changelist" comment="" />
+    <list default="true" id="fbd37c6c-0f78-4a39-b3c8-8cdc0dbe44bd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/engine/pieces/queen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/pieces/queen.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +27,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/engine/pieces/rook.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="80" selection-start-line="30" selection-start-column="80" selection-end-line="30" selection-end-column="80" />
+            <state relative-caret-position="238">
+              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="33" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/engine/pieces/bishop.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="40" selection-end-column="9" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -35,10 +49,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/engine/pieces/bishop.js">
+        <entry file="file://$PROJECT_DIR$/src/engine/pieces/queen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="53" lean-forward="true" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+            <state relative-caret-position="564">
+              <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -101,13 +115,13 @@
       <list>
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/tests/engine/pieces/pawn.spec.js" />
-        <option value="$PROJECT_DIR$/src/engine/pieces/bishop.js" />
-        <option value="$PROJECT_DIR$/src/engine/pieces/queen.js" />
         <option value="$PROJECT_DIR$/src/engine/pieces/knight.js" />
         <option value="$PROJECT_DIR$/src/engine/pieces/king.js" />
         <option value="$PROJECT_DIR$/src/engine/board.js" />
         <option value="$PROJECT_DIR$/src/engine/pieces/pawn.js" />
         <option value="$PROJECT_DIR$/src/engine/pieces/rook.js" />
+        <option value="$PROJECT_DIR$/src/engine/pieces/bishop.js" />
+        <option value="$PROJECT_DIR$/src/engine/pieces/queen.js" />
       </list>
     </option>
   </component>
@@ -235,7 +249,7 @@
       <option name="presentableId" value="Default" />
       <updated>1563549907834</updated>
       <workItem from="1563549909369" duration="1589000" />
-      <workItem from="1563785423604" duration="7187000" />
+      <workItem from="1563785423604" duration="7575000" />
     </task>
     <servers />
   </component>
@@ -245,7 +259,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8776000" />
+    <option name="totallyTimeSpent" value="9164000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2575" height="1415" extended-state="6" />
@@ -361,16 +375,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/engine/pieces/queen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="38" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/engine/pieces/knight.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -415,20 +419,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/engine/pieces/rook.js">
+    <entry file="file://$PROJECT_DIR$/src/engine/pieces/bishop.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="80" selection-start-line="30" selection-start-column="80" selection-end-line="30" selection-end-column="80" />
+        <state relative-caret-position="238">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="40" selection-end-column="9" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/engine/pieces/bishop.js">
+    <entry file="file://$PROJECT_DIR$/src/engine/pieces/rook.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="53" lean-forward="true" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="33" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/engine/pieces/queen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
