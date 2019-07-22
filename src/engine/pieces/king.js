@@ -1,41 +1,28 @@
 import Piece from './piece';
-import Square from "../square";
+import MoveTypes from '../moveTypes';
 
 export default class King extends Piece {
     constructor(player) {
         super(player);
+        this.pieceType = "king";
     }
 
     getAvailableMoves(board) {
         const kingPlace = board.findPiece(this);
-        let kingRow = kingPlace.row;
-        let kingCol = kingPlace.col;
-        const outputArray = [];
-        // need to check there isn't a piece in the way
-        if (kingCol+1 <= 7) {
-            outputArray.push(new Square(kingRow, kingCol+1));
-            if (kingRow+1 <= 7) {
-                outputArray.push(new Square(kingRow+1, kingCol+1));
-            }
-            if (kingRow-1 >= 0) {
-                outputArray.push(new Square(kingRow-1, kingCol+1));
-            }
-        }
-        if (kingCol-1 >= 0) {
-            outputArray.push(new Square(kingRow, kingCol-1));
-            if (kingRow+1 <= 7) {
-                outputArray.push(new Square(kingRow+1, kingCol-1));
-            }
-            if (kingRow-1 >= 0) {
-                outputArray.push(new Square(kingRow-1, kingCol-1));
-            }
-        }
-        if (kingRow+1 <= 7) {
-            outputArray.push(new Square(kingRow+1, kingCol));
-        }
-        if (kingRow-1 >= 0) {
-            outputArray.push(new Square(kingRow-1, kingCol));
-        }
+        const row = kingPlace.row;
+        const col = kingPlace.col;
+        const moveTypes = new MoveTypes();
+        let outputArray = moveTypes.moveOnce(row, col, 1, 0, board);
+        outputArray = outputArray.concat(moveTypes.moveOnce(row, col, -1, 0, board));
+        outputArray = outputArray.concat(moveTypes.moveOnce(row, col, 0, -1, board));
+        outputArray = outputArray.concat(moveTypes.moveOnce(row, col, 0, -1, board));
+        outputArray = outputArray.concat(moveTypes.moveOnce(row, col, 1, 1, board));
+        outputArray = outputArray.concat(moveTypes.moveOnce(row, col, 1, -1, board));
+        outputArray = outputArray.concat(moveTypes.moveOnce(row, col, -1, 1, board));
+        outputArray = outputArray.concat(moveTypes.moveOnce(row, col, -1, -1, board));
+
+        console.log(outputArray);
+
         return outputArray;
     }
 }
