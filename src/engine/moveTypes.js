@@ -12,7 +12,7 @@ export default  class moveTypes {
                 return [new Square(row+rowSteps, col+colSteps)];
             } else {
                 this.pieceInTheWay = true;
-                if (piece.player != board.currentPlayer && piece.pieceType!= "king") {
+                if (piece.player !== board.currentPlayer && piece.pieceType!== "king") {
                     return [new Square(row+rowSteps, col+colSteps)];
                 }
             }
@@ -20,7 +20,9 @@ export default  class moveTypes {
     }
 
     moveContinuously(row, col, rowSteps, colSteps, board) {
+        this.pieceInTheWay = false;
         let outputArray = [];
+
         const rowStepIncrease = rowSteps;
         const colStepIncrease = colSteps;
         while(row+rowSteps <= 7 && row+rowSteps >= 0 && col+colSteps <= 7 && col+colSteps >= 0 && !this.pieceInTheWay) {
@@ -33,8 +35,9 @@ export default  class moveTypes {
                 colSteps += colStepIncrease;
             }
         }
-        this.pieceInTheWay = false;
 
         return outputArray;
     }
 }
+
+
