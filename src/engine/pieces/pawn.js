@@ -34,7 +34,6 @@ export default class Pawn extends Piece {
                 outputArray.push(new Square(pawnRow - 2, pawnCol));
             }
         }
-        console.log(outputArray);
         return outputArray;
     }
 }
