@@ -39,7 +39,6 @@ export default class Bishop extends Piece {
             bishopRow--;
             bishopCol--;
         }
-        console.log(outputArray);
         return outputArray;
     }
 }
