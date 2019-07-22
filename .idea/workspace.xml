@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbd37c6c-0f78-4a39-b3c8-8cdc0dbe44bd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/engine/pieces/pawn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/pieces/pawn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/pieces/rook.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/pieces/rook.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/pieces/bishop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/pieces/bishop.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/engine/pieces/rook.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+            <state relative-caret-position="153">
+              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="34" selection-end-column="27" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -50,14 +49,20 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/engine/pieces/rook.spec.js">
+        <entry file="file://$PROJECT_DIR$/src/engine/pieces/bishop.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="374">
+              <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
               <folding>
-                <element signature="e#0#30#0" expanded="true" />
+                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/engine/pieces/bishop.spec.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -96,6 +101,7 @@
         <option value="$PROJECT_DIR$/tests/engine/pieces/pawn.spec.js" />
         <option value="$PROJECT_DIR$/src/engine/pieces/pawn.js" />
         <option value="$PROJECT_DIR$/src/engine/pieces/rook.js" />
+        <option value="$PROJECT_DIR$/src/engine/pieces/bishop.js" />
       </list>
     </option>
   </component>
@@ -223,7 +229,7 @@
       <option name="presentableId" value="Default" />
       <updated>1563549907834</updated>
       <workItem from="1563549909369" duration="1589000" />
-      <workItem from="1563785423604" duration="3279000" />
+      <workItem from="1563785423604" duration="4465000" />
     </task>
     <servers />
   </component>
@@ -233,7 +239,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4868000" />
+    <option name="totallyTimeSpent" value="6054000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2575" height="1415" extended-state="6" />
@@ -308,9 +314,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/engine/pieces/bishop.spec.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/engine/board.spec.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -323,13 +326,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/engine/player.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/engine/pieces/pawn.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="46" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/engine/gameSettings.js">
       <provider selected="true" editor-type-id="text-editor" />
@@ -357,21 +353,41 @@
     <entry file="file://$PROJECT_DIR$/src/engine/square.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/engine/pieces/rook.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/engine/pieces/pawn.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/engine/pieces/rook.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+        <state relative-caret-position="153">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="34" selection-end-column="27" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/engine/pieces/rook.spec.js">
+    <entry file="file://$PROJECT_DIR$/tests/engine/pieces/bishop.spec.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/engine/pieces/bishop.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="374">
+          <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
