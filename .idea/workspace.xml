@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbd37c6c-0f78-4a39-b3c8-8cdc0dbe44bd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/engine/pieces/bishop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/pieces/bishop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/pieces/king.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/pieces/king.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/pieces/queen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/pieces/queen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/pieces/knight.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/pieces/knight.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,18 +15,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/engine/board.spec.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/engine/pieces/pawn.spec.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -63,10 +49,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/engine/pieces/queen.js">
+        <entry file="file://$PROJECT_DIR$/src/engine/pieces/knight.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+            <state relative-caret-position="744">
+              <caret line="47" column="54" selection-start-line="47" selection-start-column="54" selection-end-line="47" selection-end-column="54" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -136,6 +122,7 @@
         <option value="$PROJECT_DIR$/src/engine/pieces/bishop.js" />
         <option value="$PROJECT_DIR$/src/engine/pieces/king.js" />
         <option value="$PROJECT_DIR$/src/engine/pieces/queen.js" />
+        <option value="$PROJECT_DIR$/src/engine/pieces/knight.js" />
       </list>
     </option>
   </component>
@@ -263,7 +250,7 @@
       <option name="presentableId" value="Default" />
       <updated>1563549907834</updated>
       <workItem from="1563549909369" duration="1589000" />
-      <workItem from="1563785423604" duration="5611000" />
+      <workItem from="1563785423604" duration="6258000" />
     </task>
     <servers />
   </component>
@@ -273,7 +260,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7200000" />
+    <option name="totallyTimeSpent" value="7847000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2575" height="1415" extended-state="6" />
@@ -419,16 +406,6 @@
     <entry file="file://$PROJECT_DIR$/src/engine/pieces/piece.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/engine/pieces/bishop.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="41" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/engine/pieces/king.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -445,8 +422,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/engine/pieces/queen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+        <state relative-caret-position="153">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="38" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/engine/pieces/bishop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="41" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/engine/pieces/knight.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="47" column="54" selection-start-line="47" selection-start-column="54" selection-end-line="47" selection-end-column="54" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
