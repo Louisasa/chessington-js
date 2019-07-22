@@ -12,16 +12,17 @@ export default class King extends Piece {
         const row = kingPlace.row;
         const col = kingPlace.col;
         const moveTypes = new MoveTypes();
-        let outputArray = moveTypes.moveOnce(row, col, 1, 0, board);
-        outputArray = outputArray.concat(moveTypes.moveOnce(row, col, -1, 0, board));
-        outputArray = outputArray.concat(moveTypes.moveOnce(row, col, 0, -1, board));
-        outputArray = outputArray.concat(moveTypes.moveOnce(row, col, 0, -1, board));
-        outputArray = outputArray.concat(moveTypes.moveOnce(row, col, 1, 1, board));
-        outputArray = outputArray.concat(moveTypes.moveOnce(row, col, 1, -1, board));
-        outputArray = outputArray.concat(moveTypes.moveOnce(row, col, -1, 1, board));
-        outputArray = outputArray.concat(moveTypes.moveOnce(row, col, -1, -1, board));
-
-        console.log(outputArray);
+        let outputArray = [];
+        for (let rowIndex = -1; rowIndex <= 1; rowIndex++) {
+            for (let colIndex = -1; colIndex <= 1; colIndex++) {
+                if (colIndex != 0 || rowIndex != 0) {
+                    const result = moveTypes.moveOnce(row, col, rowIndex, colIndex, board);
+                    if (result != undefined) {
+                        outputArray = outputArray.concat(result);
+                    }
+                }
+            }
+        }
 
         return outputArray;
     }

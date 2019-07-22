@@ -14,8 +14,8 @@ export default class Queen extends Piece {
         const moveTypes = new MoveTypes();
         let outputArray = moveTypes.moveContinuously(row, col, 1, 1, board);
         outputArray = outputArray.concat(moveTypes.moveContinuously(row, col, -1, 1, board));
+        outputArray = outputArray.concat(moveTypes.moveContinuously(row, col, 1, -1, board));
         outputArray = outputArray.concat(moveTypes.moveContinuously(row, col, -1, -1, board));
-        outputArray = outputArray.concat(moveTypes.moveContinuously(row, col, -1, 1, board));
         outputArray = outputArray.concat(moveTypes.moveContinuously(row, col, 1, 0, board));
         outputArray = outputArray.concat(moveTypes.moveContinuously(row, col, -1, 0, board));
         outputArray = outputArray.concat(moveTypes.moveContinuously(row, col, 0, -1, board));

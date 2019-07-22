@@ -12,16 +12,20 @@ export default class Knight extends Piece {
         const row = knightPlace.row;
         const col = knightPlace.col;
         const moveTypes = new MoveTypes();
-        let outputArray = moveTypes.moveOnce(row, col, 1, 2, board);
-        outputArray = outputArray.concat(moveTypes.moveOnce(row, col, -1, 2, board));
-        outputArray = outputArray.concat(moveTypes.moveOnce(row, col, 2, -1, board));
-        outputArray = outputArray.concat(moveTypes.moveOnce(row, col, 2, 1, board));
-        outputArray = outputArray.concat(moveTypes.moveOnce(row, col, 1, -2, board));
-        outputArray = outputArray.concat(moveTypes.moveOnce(row, col, -1, -2, board));
-        outputArray = outputArray.concat(moveTypes.moveOnce(row, col, -2, -1, board));
-        outputArray = outputArray.concat(moveTypes.moveOnce(row, col, -2, 1, board));
+        const steps = [2,1,-2,-1];
+        let outputArray = [];
+        for (let rowIndex = 0; rowIndex < steps.length; rowIndex++) {
+            for (let colIndex = 0; colIndex < steps.length; colIndex++) {
+                if ((rowIndex % 2 === 0 && colIndex % 2 === 1) || (rowIndex % 2 === 1 && colIndex % 2 === 0)) {
+                    const result = moveTypes.moveOnce(row, col, steps[rowIndex], steps[colIndex], board);
+                    if (result != undefined) {
+                        outputArray = outputArray.concat(result);
+                    }
+                }
+            }
+        }
 
-        console.log(outputArray);
+
         return outputArray;
     }
 }
